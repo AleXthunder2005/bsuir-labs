@@ -1,0 +1,22 @@
+%option noyywrap
+
+%{
+int counter = 1;
+char c;
+%}
+
+%%
+\n     printf("\n%d: ", counter++);
+[.]/.    printf(".\n%d:", counter++);
+
+%%
+ 
+int main() {
+    c = getc(stdin);  
+    if (c != EOF) {
+        ungetc(c, stdin);
+        printf("%d: ", counter++);
+        yylex();
+    }
+    return 0;
+}

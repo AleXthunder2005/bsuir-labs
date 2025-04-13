@@ -1,0 +1,2 @@
+if today_temp > yesterday_temp:
+	print("katyaaa aaaa")

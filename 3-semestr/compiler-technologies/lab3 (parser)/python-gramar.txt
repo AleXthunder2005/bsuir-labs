@@ -1,0 +1,36 @@
+<Program> --> <Statement> <StatementSet> | ε
+
+<StatementSet> --> <Statement> ttNEW_LINE <StatementSet> | ε
+
+<Statement> --> <IfStatement>
+               | <WhileStatement>
+               | <MatchStatement>
+               | <AssignmentStatement>
+
+<IfStatement> --> ttIF <Condition> ttCOLON <Block> <IfTail>
+<IfTail> --> <ElifBlock> <IfTail> | <ElseBlock> | ε
+<ElifBlock> --> ttELIF <Condition> ttCOLON <Block>
+<ElseBlock> --> ttELSE ttCOLON <Block>
+
+<WhileStatement> --> ttWHILE <Condition> ttCOLON <Block>
+
+<MatchStatement> --> ttMATCH <Expression> ttCOLON <CaseBlockSet>
+<CaseBlockSet> --> <CaseBlock> <CaseBlockSet> | ε
+<CaseBlock> --> ttCASE <Expression> ttCOLON <Block>
+
+<AssignmentStatement> --> ttIDENTIFICATOR ttASSIGNMENT <Expression>
+
+<Operand> --> ttIDENTIFICATOR
+            | ttINT
+            | ttSTRING
+            | ttBRACKET_OPEN <Expression> ttBRACKET_CLOSE
+
+<Expression> --> <Operand> <ArithmeticExpressionTail>
+<ArithmeticExpressionTail> --> ttARITHMETIC_OPERATOR <Operand> <ArithmeticExpressionTail> | ε
+
+<Condition> --> <Expression> ttCOMPARISON_SIGN <Expression>
+              | ttBRACKET_OPEN <Condition> ttBRACKET_CLOSE
+
+<Block> --> <IndentedStatementSet>
+<IndentedStatementSet> --> <IndentedStatement> <IndentedStatementSet> | ε
+<IndentedStatement> --> ttTAB <Statement>

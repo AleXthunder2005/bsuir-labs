@@ -1,0 +1,4 @@
+cd Desktop\БГУИР\3 семестр\КТ\Лабораторная работа 2
+flex rules.txt
+gcc lex.yy.c -o lex.yy.exe
+lex.yy.exe < input.txt > output.txt

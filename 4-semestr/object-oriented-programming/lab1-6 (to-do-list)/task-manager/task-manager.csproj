@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{09070F8C-2A8B-4F25-A668-3B98C88FB29E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>task_manager</RootNamespace>
+    <AssemblyName>task-manager</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.9.0.3\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Pipelines, Version=9.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.9.0.3\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=9.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.9.0.3\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=9.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.9.0.3\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Factory.cs" />
+    <Compile Include="FileHandlers\BinaryHandler.cs" />
+    <Compile Include="Commander\CommandManager.cs" />
+    <Compile Include="Commander\Commands.cs" />
+    <Compile Include="FileHandlers\TaskJsonConverter.cs" />
+    <Compile Include="FileHandlers\JsonHandler.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="DrawOptions.cs" />
+    <Compile Include="Tasks\PriorityTask\PriorityTaskCreatorInitializer.cs" />
+    <Compile Include="Tasks\ProgressTask\ProgressTaskCreatorInitializer.cs" />
+    <Compile Include="Tasks\ReccuringSimpleTask\ReccuringSimpleTaskCreatorInitializer.cs" />
+    <Compile Include="Tasks\Reminder\ReminderCreatorInitializer.cs" />
+    <Compile Include="Tasks\SimpleTask\SimpleTaskCreatorInitializer.cs" />
+    <Compile Include="Tasks\Task\TaskCreatorBuilder.cs" />
+    <Compile Include="Tasks\Task\TaskOptions.cs" />
+    <Compile Include="mTaskManager.cs" />
+    <Compile Include="fTaskCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTaskCreator.Designer.cs">
+      <DependentUpon>fTaskCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DerivativeConstructions\Project.cs" />
+    <Compile Include="DerivativeConstructions\TaskList.cs" />
+    <Compile Include="Tasks\Task\TaskCreatorInitializer.cs" />
+    <Compile Include="Tasks\PriorityTask\PriorityTask.cs" />
+    <Compile Include="Tasks\PriorityTask\PriorityTaskOptions.cs" />
+    <Compile Include="Tasks\PriorityTask\PriorityTaskCreatorBuilder.cs" />
+    <Compile Include="Tasks\ProgressTask\ProgressTask.cs" />
+    <Compile Include="Tasks\ProgressTask\ProgressTaskOptions.cs" />
+    <Compile Include="Tasks\ProgressTask\ProgressTaskCreatorBuilder.cs" />
+    <Compile Include="Tasks\ReccuringSimpleTask\ReccuringSimpleTask.cs" />
+    <Compile Include="Tasks\ReccuringSimpleTask\ReccuringSimpleTaskOptions.cs" />
+    <Compile Include="Tasks\ReccuringSimpleTask\ReccuringSimpleTaskCreatorBuilder.cs" />
+    <Compile Include="Tasks\Reminder\Reminder.cs" />
+    <Compile Include="Tasks\Reminder\ReminderOptions.cs" />
+    <Compile Include="Tasks\Reminder\ReminderCreatorBuilder.cs" />
+    <Compile Include="Tasks\SimpleTask\SimpleTask.cs" />
+    <Compile Include="Tasks\SimpleTask\SimpleTaskOptions.cs" />
+    <Compile Include="Tasks\SimpleTask\SimpleTaskCreatorBuilder.cs" />
+    <Compile Include="Tasks\Task\Task.cs" />
+    <Compile Include="fTaskManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTaskManager.Designer.cs">
+      <DependentUpon>fTaskManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fTaskManager.resx">
+      <DependentUpon>fTaskManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTaskCreator.resx">
+      <DependentUpon>fTaskCreator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JsonChecksumSaver\JsonChecksumSaver.csproj">
+      <Project>{7A744796-FCD6-4E52-9E44-65A1793419C1}</Project>
+      <Name>JsonChecksumSaver</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

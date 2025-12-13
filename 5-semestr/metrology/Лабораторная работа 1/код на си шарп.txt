@@ -1,0 +1,185 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("=== КАЛЬКУЛЯТОР С ФУНКЦИЯМИ ===");
+        Console.WriteLine("1. Сложение");
+        Console.WriteLine("2. Вычитание");
+        Console.WriteLine("3. Умножение");
+        Console.WriteLine("4. Деление");
+        Console.WriteLine("5. Возведение в степень");
+        Console.WriteLine("6. Квадратный корень");
+        Console.WriteLine("7. Факториал");
+        Console.WriteLine("8. Выход");
+        
+        bool running = true;
+        while (running)
+        {
+            Console.Write("\nВыберите операцию (1-8): ");
+            string choice = Console.ReadLine();
+            
+            switch (choice)
+            {
+                case "1":
+                    Addition();
+                    break;
+                case "2":
+                    Subtraction();
+                    break;
+                case "3":
+                    Multiplication();
+                    break;
+                case "4":
+                    Division();
+                    break;
+                case "5":
+                    Power();
+                    break;
+                case "6":
+                    SquareRoot();
+                    break;
+                case "7":
+                    Factorial();
+                    break;
+                case "8":
+                    running = false;
+                    Console.WriteLine("Выход из программы...");
+                    break;
+                default:
+                    Console.WriteLine("Неверный выбор! Попробуйте снова.");
+                    break;
+            }
+        }
+        
+        Console.WriteLine("Нажмите любую клавишу для выхода...");
+        Console.ReadKey();
+    }
+    
+    static void Addition()
+    {
+        Console.WriteLine("=== СЛОЖЕНИЕ ===");
+        double a = GetNumber("Введите первое число: ");
+        double b = GetNumber("Введите второе число: ");
+        double result = a + b;
+        Console.WriteLine($"Результат: {a} + {b} = {result}");
+        try
+        {
+        }
+        catch (ExceptionType ex)
+        {
+        }
+        finally
+        {
+        }
+    }
+    
+    static void Subtraction()
+    {
+        Console.WriteLine("=== ВЫЧИТАНИЕ ===");
+        double a = GetNumber("Введите первое число: ");
+        double b = GetNumber("Введите второе число: ");
+        double result = a - b;
+        Console.WriteLine($"Результат: {a} - {b} = {result}");
+    }
+    
+    static void Multiplication()
+    {
+        Console.WriteLine("=== УМНОЖЕНИЕ ===");
+        double a = GetNumber("Введите первое число: ");
+        double b = GetNumber("Введите второе число: ");
+        double result = a * b;
+        Console.WriteLine($"Результат: {a} * {b} = {result}");
+    }
+    
+    static void Division()
+    {
+        Console.WriteLine("=== ДЕЛЕНИЕ ===");
+        double a = GetNumber("Введите делимое: ");
+        double b;
+        do
+        {
+            b = GetNumber("Введите делитель (не ноль): ");
+            if (b == 0)
+            {
+                Console.WriteLine("Ошибка: деление на ноль невозможно!");
+            }
+        } while (b == 0);
+        
+        double result = a / b;
+        Console.WriteLine($"Результат: {a} / {b} = {result:F2}");
+    }
+    
+    static void Power()
+    {
+        Console.WriteLine("=== ВОЗВЕДЕНИЕ В СТЕПЕНЬ ===");
+        double baseNum = GetNumber("Введите основание: ");
+        double exponent = GetNumber("Введите степень: ");
+        double result = Math.Pow(baseNum, exponent);
+        Console.WriteLine($"Результат: {baseNum} ^ {exponent} = {result}");
+    }
+    
+    static void SquareRoot()
+    {
+        Console.WriteLine("=== КВАДРАТНЫЙ КОРЕНЬ ===");
+        double number;
+        do
+        {
+            number = GetNumber("Введите число (не отрицательное): ");
+            if (number < 0)
+            {
+                Console.WriteLine("Ошибка: нельзя извлечь корень из отрицательного числа!");
+            }
+        } while (number < 0);
+        
+        double result = Math.Sqrt(number);
+        Console.WriteLine($"Результат: √{number} = {result:F2}");
+    }
+    
+    static void Factorial()
+    {
+     Console.WriteLine("=== ФАКТОРИАЛ ===");
+        int number;
+        do
+        {
+            number = (int)GetNumber("Введите целое неотрицательное число: ");
+            if (number < 0)
+            {
+                Console.WriteLine("Ошибка: факториал отрицательного числа не определен!");
+            }
+        } while (number < 0);
+        
+        long result = CalculateFactorial(number);
+        Console.WriteLine($"Результат: {number}! = {result}");
+    }
+    
+    static long CalculateFactorial(int n)
+    {
+        if (n == 0 || n == 1)
+            return 1;
+        
+        long factorial = 1;
+        for (int i = 2; i <= n; i++)
+        {
+            factorial *= i;
+        }
+        return factorial;
+    }
+    
+    static double GetNumber(string prompt)
+    {
+        double number;
+        while (true)
+        {
+            Console.Write(prompt);
+            string input = Console.ReadLine();
+            if (double.TryParse(input, out number))
+            {
+                return number;
+            }
+            Console.WriteLine("Ошибка: введите корректное число!");
+        }
+    }
+}

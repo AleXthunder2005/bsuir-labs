@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.216,F:\Projects\DelphiProjects\Unit1.pas=F:\Projects\DelphiProjects\Lab5_2\MainUnit.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.609,=F:\Projects\DelphiProjects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.094,F:\Projects\DelphiProjects\Project1.dproj=F:\Projects\DelphiProjects\Lab5_2\Lab5_2.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.055,F:\Projects\DelphiProjects\Unit1.pas=F:\Projects\DelphiProjects\Lab5_2\BinaryTreeUnit.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.220,=F:\Projects\DelphiProjects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.216,F:\Projects\DelphiProjects\Unit1.dfm=F:\Projects\DelphiProjects\Lab5_2\MainUnit.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.392,=F:\Projects\DelphiProjects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.104,=F:\Projects\DelphiProjects\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

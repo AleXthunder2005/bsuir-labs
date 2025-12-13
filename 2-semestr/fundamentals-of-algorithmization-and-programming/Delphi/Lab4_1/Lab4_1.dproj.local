@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.439,=F:\Projects\DelphiProjects\Lab4_1 Remake\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.673,F:\Projects\DelphiProjects\Lab4_1 Remake\Unit2.pas=F:\Projects\DelphiProjects\Lab4_1 Remake\AddRecordUnit.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.494,=F:\Projects\DelphiProjects\Lab4_1 Remake\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.389,=F:\Projects\DelphiProjects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.129,=F:\Projects\DelphiProjects\Lab4_1 Remake\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.702,F:\Projects\DelphiProjects\Lab4_1 Remake\ManualUnit.pas=F:\Projects\DelphiProjects\Lab4_1 Remake\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.702,F:\Projects\DelphiProjects\Lab4_1 Remake\ManualUnit.dfm=F:\Projects\DelphiProjects\Lab4_1 Remake\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.907,F:\Projects\DelphiProjects\Lab4_1 Remake\Unit2.pas=F:\Projects\DelphiProjects\Lab4_1 Remake\EditRecordUnit.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.377,F:\Projects\DelphiProjects\Lab4_1 Remake\Unit2.pas=F:\Projects\DelphiProjects\Lab4_1 Remake\InformationUnit.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.395,=F:\Projects\DelphiProjects\Lab4_1 Remake\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.392,=F:\Projects\DelphiProjects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.888,=F:\Projects\DelphiProjects\Lab4_1 Remake\MainUnit.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.377,F:\Projects\DelphiProjects\Lab4_1 Remake\Unit2.dfm=F:\Projects\DelphiProjects\Lab4_1 Remake\InformationUnit.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.853,F:\Projects\DelphiProjects\Lab4_1 Remake\StartUnit.dfm=F:\Projects\DelphiProjects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.816,=F:\Projects\DelphiProjects\Lab4_1 Remake\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.378,F:\Projects\DelphiProjects\Lab4_1 Remake\Unit1.pas=F:\Projects\Учебная практика\DishUnit.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.853,F:\Projects\DelphiProjects\Lab4_1 Remake\StartUnit.pas=F:\Projects\DelphiProjects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.104,=F:\Projects\DelphiProjects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.471,F:\Projects\DelphiProjects\Lab4_1 Remake\Lab4_1.dproj=F:\Projects\DelphiProjects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.673,F:\Projects\DelphiProjects\Lab4_1 Remake\Unit2.dfm=F:\Projects\DelphiProjects\Lab4_1 Remake\AddRecordUnit.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.907,F:\Projects\DelphiProjects\Lab4_1 Remake\Unit2.dfm=F:\Projects\DelphiProjects\Lab4_1 Remake\EditRecordUnit.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

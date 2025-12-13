@@ -1,0 +1,25 @@
+using System;
+class Program {
+    static void Main() {
+        if (y < 4) {
+            switch (y) {
+                case 1:
+                    Console.WriteLine("one");
+                    break;
+                case 2:
+                    if (x == 0) {
+                        Console.WriteLine("x is zero");
+                    } else if (x < 0) {
+                        Console.WriteLine("x is negative");
+                    }
+                    break;
+                case 3:
+                    Console.WriteLine("3");
+                    break;
+                default:
+                    Console.WriteLine("default");
+                    break;
+            }
+        }
+    }
+}

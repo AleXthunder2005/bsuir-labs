@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.104,=F:\Projects\DelphiProjects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.377,=F:\Projects\DelphiProjects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.711,F:\Projects\DelphiProjects\Модуляция хорд\ChordUnit.pas=F:\Projects\DelphiProjects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.392,=F:\Projects\DelphiProjects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.711,F:\Projects\DelphiProjects\Модуляция хорд\ChordUnit.dfm=F:\Projects\DelphiProjects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.461,F:\Projects\DelphiProjects\Модуляция хорд\Chords.dproj=F:\Projects\DelphiProjects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.533,=F:\Projects\DelphiProjects\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.104,=F:\Projects\DelphiProjects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.759,F:\Projects\DelphiProjects\Lab5_1\ListLibraryInit.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.513,=F:\Projects\DelphiProjects\5_1DLLProject\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.392,=F:\Projects\DelphiProjects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.580,F:\Projects\DelphiProjects\Project1.dproj=F:\Projects\DelphiProjects\Project51.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.965,F:\Projects\DelphiProjects\ListDLL.dproj=F:\Projects\DelphiProjects\5_1DLLProject\ListDLL.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.183,F:\Projects\DelphiProjects\Lab5_1\ListLibraryInit.pas=F:\Projects\DelphiProjects\5_1DLLProject\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.888,F:\Projects\DelphiProjects\Project51.dproj=F:\Projects\DelphiProjects\ListDLL.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

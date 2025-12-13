@@ -1,0 +1,3 @@
+https://www.iana.org/help/example-domains
+https://varkacoffee.by/
+https://lms.bsuir.by/login/auth.php

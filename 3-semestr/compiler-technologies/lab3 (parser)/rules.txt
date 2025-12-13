@@ -1,0 +1,61 @@
+%option main
+%{
+#include <stdio.h>
+#include <stdlib.h>
+
+int line = 1;
+void yyerror(char *message);
+%}
+
+digit                   [0-9]
+letter                  [_a-zA-Z]
+quote                   ['"]
+tab                     [\t]
+white_space             [ ]
+unsigned                {digit}+
+signed                  -{unsigned}
+arithmetic_operator     [-+*/]
+comparison_sign         <|>|>=|<=|==|!=
+colon                   :
+assignment              =    
+bracket_open            [(]
+bracket_close           [)]
+identificator           {letter}({letter}|{digit})*
+string                  {quote}({letter}|{white_space})*{quote}
+new_line                [\n]
+
+%%
+
+if                      printf ("%s|%s|%d\n", "ttIF", yytext, line);
+else                    printf ("%s|%s|%d\n", "ttELSE", yytext, line);
+elif                    printf ("%s|%s|%d\n", "ttELIF", yytext, line);
+while                   printf ("%s|%s|%d\n", "ttWHILE", yytext, line);
+for                     printf ("%s|%s|%d\n", "ttFOR", yytext, line);
+in                      printf ("%s|%s|%d\n", "ttIN", yytext, line);
+and                     printf ("%s|%s|%d\n", "ttAND", yytext, line);
+or                      printf ("%s|%s|%d\n", "ttOR", yytext, line);
+match                   printf ("%s|%s|%d\n", "ttMATCH", yytext, line);
+case                    printf ("%s|%s|%d\n", "ttCASE", yytext, line);
+
+{bracket_open}          printf ("%s|%s|%d\n", "ttBRACKET_OPEN", yytext, line);
+{bracket_close}         printf ("%s|%s|%d\n", "ttBRACKET_CLOSE", yytext, line); 
+{colon}                 printf ("%s|%s|%d\n", "ttCOLON", yytext, line);
+{assignment}            printf ("%s|%s|%d\n", "ttASSIGNMENT", yytext, line);
+
+{unsigned}              printf ("%s|%s|%d\n", "ttINT", yytext, line);
+{signed}                printf ("%s|%s|%d\n", "ttINT", yytext, line);
+{arithmetic_operator}   printf ("%s|%s|%d\n", "ttARITHMETIC_OPERATOR", yytext, line);
+{comparison_sign}       printf ("%s|%s|%d\n", "ttCOMPARISON_SIGN", yytext, line);
+{identificator}         printf ("%s|%s|%d\n", "ttIDENTIFICATOR", yytext, line);
+{string}                printf ("%s|%s|%d\n", "ttSTRING", yytext, line);
+{tab}                   printf ("%s|%s|%d\n", "ttTAB", yytext, line);
+
+{white_space}           {}
+{new_line}              {line++; printf ("%s|%s|%d\n", "ttNEW_LINE", "", line);}
+.                       yyerror("unrecognized symbol");
+
+%%
+
+void yyerror(char *message) {
+    fprintf(stderr, "fatal error: line %d - %s - lexem %s\n", line, message, yytext);
+}

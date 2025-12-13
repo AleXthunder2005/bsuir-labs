@@ -1,0 +1,11 @@
+ttIF|if|1
+ttIDENTIFICATOR|today_temp|1
+ttCOMPARISON_SIGN|>|1
+ttIDENTIFICATOR|yesterday_temp|1
+ttCOLON|:|1
+ttNEW_LINE||2
+ttTAB|	|2
+ttIDENTIFICATOR|print|2
+ttBRACKET_OPEN|(|2
+ttSTRING|"katyaaa aaaa"|2
+ttBRACKET_CLOSE|)|2

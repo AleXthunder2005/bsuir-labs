@@ -1,0 +1,17 @@
+program Project1;
+
+uses
+  Vcl.Forms,
+  MainUnit in 'MainUnit.pas' {MainForm},
+  Vcl.Themes,
+  Vcl.Styles;
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  TStyleManager.TrySetStyle('Sky');
+  Application.CreateForm(TMainForm, MainForm);
+  Application.Run;
+end.
